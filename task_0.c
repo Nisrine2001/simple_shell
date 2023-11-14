@@ -8,6 +8,7 @@
  */
 main()
 {
-	printf("we will start a new task so enter a number please\n");
+	printf("we will start a new task \n");
+	printf("this code is beautiful");
 }
 
