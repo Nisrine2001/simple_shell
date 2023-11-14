@@ -10,6 +10,6 @@
 #include <errno.h>
 #include <fcntl.h>
 
-char *read_rule(void);
+char *read_line(void);
 
 #endif
