@@ -1,5 +1,4 @@
 #include <shell.h>
-
 /**
  * main - Functions for the main simple shell
  * @argv: arguments vector
@@ -7,6 +6,7 @@
  * @env
  * Return: 0 (if success)
  */
+
 int main(int argc, char **argv)
 {
 char *l = NULL, **order = NULL;
