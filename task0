@@ -17,6 +17,7 @@ printf("Entrez la base : ");
 scanf("%f", &base);
 printf("Entrez l'exposant : ");
 scanf("%f", &expo);
-result = pow(base, expoprintf("Résultat : %f\n", result);
+result = pow(base, expo)
+printf("Résultat : %f\n", result);
 return (0);
 }
