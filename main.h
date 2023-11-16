@@ -5,4 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+void execute(char *line, char **ar);
 #endif

@@ -1,6 +1,22 @@
 #include "main.h"
+/**
+ * main - Functions for the main simple shell
+ * @argv: arguments vector
+ * @argc: arguments count
+ * Return: 0 (if success)
+ */
+void execute(char *line, char **ar)
+{
+pid_t id;
+id = fork();
+while (id != 0)
+{
+wait(NULL);
+}
+execve(line, ar, NULL);
+}
 
-int main(void)
+int main(int argc, char **argv)
 {char *line;
 int i;
 size_t n;
