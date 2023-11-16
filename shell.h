@@ -10,7 +10,6 @@
 #include <sys/stat.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <math.h>
 
 char *read_line(void);
 
