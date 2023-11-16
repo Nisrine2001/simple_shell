@@ -1,56 +1,43 @@
-#include <shell.h>
+#include "main.h"
 /**
  * main - Functions for the main simple shell
  * @argv: arguments vector
  * @argc: arguments count
- * @env
  * Return: 0 (if success)
  */
+void execute(char *line, char **ar)
+{
+pid_t id;
+id = fork();
+while (id != 0)
+{
+wait(NULL);
+}
+execve(line, ar, NULL);
+}
 
 int main(int argc, char **argv)
-{
-char *l = NULL, **order = NULL;
-int st = 0;
-void (argc);
-void (argv);
-
+{char *line;
+int i;
+size_t n;
+ssize_t l = 0;
+char **ar = NULL, *token;
 while (1)
 {
-
-l = read_line();
-if (l == NULL)/* reach EOF ctrl = D */
+write(1, "$ ", 2);
+l = getline(&line, &n, stdin);
+if (l == -1)
+break;
+return (-1);
+token = strtok(line, " \n\t\n")
+ar = malloc(200)
+for (r[i] = token ; token != NULL; i++)
 {
-if (isatty(STDIN_FILENO))
-write(STDOUT_FILENO, "\n", 1);
-return (st);
+token = strtok(NULL, "\n\t\n");
 }
-
-free(l);
-command = tokenize(l);
-
-/*execute_status = (order, argv);*/
-}
-}
-
-/**
- * read_line - read from the input
- * Return: 0 (if success)
- */
-
-char *read_line(void)
-{
-char *line = NULL;
-size_t lenght = 0;
-size_t i;
-if (isatty(STDIN_FILENO))
-write(STDOUT_FILENO, "$ ", 2);
-i = getline(&line, &lenght, stdin);
-if (i == -1)
-{
+ar[i] = NULL;
+execve(line, ar, NULL);
 free(line);
-
-return (NULL);
 }
-
-return (line);
+return (0);
 }

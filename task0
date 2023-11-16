@@ -9,14 +9,7 @@
  */
 main()
 {
-float base, expo, result;
-
-printf("we will start a new task \n");
-printf("this code is beautiful");
-printf("Entrez la base : ");
-scanf("%f", &base);
-printf("Entrez l'exposant : ");
-scanf("%f", &expo);
-result = pow(base, expoprintf("Résultat : %f\n", result);
+float base=2, expo=2, result;
+result = pow(base, expo);
 return (0);
 }
