@@ -1,17 +1,17 @@
-#include <SHELL_H>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+#include <stdio.h>
+/**
+ * main -Entry point
+ *
+ * Description: A C program that calculates the sum of two numbers
+ *
+ * Return: Always 0 (Success).
+*/
+int main(void)
+{int b, q;
 
-int main (void)
-{
-size_t a = 0;
-char *buffer = NULL;
-
-int type = write(STDOUT_FILENO, "& ", 1);
-type = write(STDOUT_FILENO, buffer, strlen(buffer));
-type = write(STDOUT_FILENO, "\n", 1);
-
-free (buffer);
+write(1, "Entrez deux nombres à additionner\n", 34);
+scanf("%d%d", &b, &q);
+printf("La somme des deux nombres est = %d\n", b + q);
 return (0);
 }
+
